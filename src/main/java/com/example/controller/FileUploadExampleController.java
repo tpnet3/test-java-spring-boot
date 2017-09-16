@@ -1,6 +1,8 @@
 package com.example.controller;
 
 import com.example.object.FileObject;
+import com.example.service.FileService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +12,17 @@ import javax.validation.Valid;
 
 @RestController
 public class FileUploadExampleController {
+
+    private FileService fileService;
+
+    // properties 의 file.dir 를 불러옵니다.
+    @Value("${file.dir}")
+    private String fileDir;
+
+    // constructor 을 만들면, @Autowired 어노테이션이 생략되어도 됩니다.
+    public FileUploadExampleController(FileService fileService) {
+        this.fileService = fileService;
+    }
 
     // @Valid 어노테이션과 해당 오브젝트의 @NotNull 과 같은 조건으로
     // 오브젝트를 체크할 수 있습니다.
@@ -40,6 +53,15 @@ public class FileUploadExampleController {
         System.out.println(file.getContentType());
         System.out.println(file.getSize());
 
-        return "업로드 되었습니다.";
+        // 파일이름을 가져옵니다.
+        String fileName = file.getOriginalFilename();
+
+        System.out.println();
+        System.out.println();
+        System.out.println(fileDir + fileName);
+        System.out.println();
+        System.out.println();
+
+        return fileService.upload(fileDir + fileName, file);
     }
 }

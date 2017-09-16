@@ -3,7 +3,6 @@ package com.example.controller;
 import com.example.service.BarService;
 import com.example.object.FirstObject;
 import com.example.service.FirstService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 // @RestController 은 스프링 컨테이너에 Restful API 로 통신하는
@@ -17,10 +16,9 @@ public class InjectExampleController {
     private FirstService firstService;
     private BarService barService;
 
-    // constructor 에 @Autowired 를 선언하면,
-    // 파라미터로 생성된 빈을 입력받습니다.
-    @Autowired
-    public InjectExampleController(FirstService firstService, BarService barService) {
+    // constructor 을 만들면, @Autowired 어노테이션이 생략되어도 됩니다.
+    public InjectExampleController(FirstService firstService,
+                                   BarService barService) {
         this.firstService = firstService;
         this.barService = barService;
     }

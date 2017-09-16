@@ -2,7 +2,6 @@ package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.PropertySource;
 
 // 어플리케이션이 처음 시작되는 클래스입니다.
 // @SpringBootApplication 은 스프링 부트 어플리케이션임을 선언하는 어노테이션입니다.
