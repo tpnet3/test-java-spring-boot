@@ -8,13 +8,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TestMapperTest {
+public class SomeMapperTest {
 
     @Autowired
-    private TestMapper testMapper;
+    private SomeMapper someMapper;
 
     @Test
-    public void testMapper() {
-        System.out.println(testMapper.getAll());
+    public void testSelectAll() {
+        System.out.println(someMapper.selectAll());
     }
 }

@@ -16,4 +16,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'service-java-spring-boot'
+rootProject.name = 'test-java-spring-boot'
