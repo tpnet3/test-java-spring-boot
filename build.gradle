@@ -35,7 +35,4 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     // end::actuator[]
     testCompile("junit:junit")
-
-    compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.11.RELEASE'
-
 }
