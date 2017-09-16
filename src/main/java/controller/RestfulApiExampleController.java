@@ -1,6 +1,6 @@
-package main.java.controller;
+package controller;
 
-import main.java.object.FirstObject;
+import object.FirstObject;
 import org.springframework.web.bind.annotation.*;
 
 // @RestController 은 스프링 컨테이너에 Restful API 로 통신하는

@@ -1,8 +1,8 @@
-package main.java.controller;
+package controller;
 
-import main.java.object.FirstObject;
-import main.java.service.BarService;
-import main.java.service.FirstService;
+import object.FirstObject;
+import service.BarService;
+import service.FirstService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

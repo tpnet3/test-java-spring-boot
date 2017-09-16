@@ -1,5 +1,3 @@
-package main.java;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
@@ -8,7 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 // @SpringBootApplication 은 스프링 부트 어플리케이션임을 선언하는 어노테이션입니다.
 // @PropertySource 는 스프링 부트에 대한 properties 파일을 불러옵니다.
 @SpringBootApplication
-@PropertySource(value = "classpath:resources/applications.properties")
+@PropertySource(value = "classpath:applications.properties")
 public class Application {
 
     // 처음 시작되는 메소드입니다.
