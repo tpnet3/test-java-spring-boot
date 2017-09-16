@@ -1,6 +1,6 @@
-package controller;
+package com.example.controller;
 
-import object.FirstObject;
+import com.example.object.FirstObject;
 import org.springframework.web.bind.annotation.*;
 
 // @RestController 은 스프링 컨테이너에 Restful API 로 통신하는
@@ -15,7 +15,7 @@ public class RestfulApiExampleController {
     @GetMapping("/")
     public FirstObject index(FirstObject firstObject) {
 
-        // Query string 으로 만들어진 object 를 사용할 수 있습니다.
+        // Query string 으로 만들어진 com.example.object 를 사용할 수 있습니다.
         System.out.println(firstObject.getFoo());
 
         // GetterSetter Object 를 return 으로 보내줄 경우 Json 형태로 자동으로 변환됩니다.

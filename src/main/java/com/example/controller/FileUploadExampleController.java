@@ -1,6 +1,6 @@
-package controller;
+package com.example.controller;
 
-import object.FileObject;
+import com.example.object.FileObject;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

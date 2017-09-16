@@ -1,4 +1,4 @@
-package object;
+package com.example.object;
 
 import org.springframework.web.multipart.MultipartFile;
 
