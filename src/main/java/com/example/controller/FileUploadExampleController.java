@@ -27,7 +27,7 @@ public class FileUploadExampleController {
     // @Valid 어노테이션과 해당 오브젝트의 @NotNull 과 같은 조건으로
     // 오브젝트를 체크할 수 있습니다.
     @PostMapping("/upload")
-    public String upload(@Valid FileObject fileObject,
+    public String postUpload(@Valid FileObject fileObject,
                          BindingResult result) {
 
         // @Valid 를 통과했는지 여부를 확인할 수 있습니다.
